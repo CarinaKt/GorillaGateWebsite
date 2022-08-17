@@ -3,6 +3,7 @@ import {Observable} from "rxjs";
 import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 import {map, shareReplay} from "rxjs/operators";
 import {MatSidenav} from "@angular/material/sidenav";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -18,8 +19,10 @@ export class HeaderComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private router:Router) {}
 
+  index:number=0;
+  devices=[{path:'/aboutus'},{path:'/supportus'},{path:'/three'}]
 
   @ViewChild('sidenav')
   sidenav!: MatSidenav;

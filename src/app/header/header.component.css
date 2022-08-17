@@ -4,4 +4,9 @@
   justify-content: space-between;
 }
 
+::ng-deep .mat-tab-nav-bar,
+::ng-deep .mat-tab-header {
+  border-bottom: 0em;
+}
+
 /*# sourceMappingURL=header.component.css.map */

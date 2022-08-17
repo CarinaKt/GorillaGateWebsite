@@ -15,12 +15,22 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatMenuModule } from "@angular/material/menu";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MainpageComponent } from './pages/mainpage/mainpage.component';
+import { SupportusComponent } from './pages/supportus/supportus.component';
+import { AboutusComponent } from './pages/aboutus/aboutus.component';
+import { ImpressumComponent } from './pages/impressum/impressum.component';
+import { DatenschutzComponent } from './pages/datenschutz/datenschutz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    MainpageComponent,
+    SupportusComponent,
+    AboutusComponent,
+    ImpressumComponent,
+    DatenschutzComponent,
   ],
   imports: [
     BrowserModule,
