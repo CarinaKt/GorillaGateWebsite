@@ -1,0 +1,29 @@
+@use 'src/custom-theme'
+// Import theming functions
+@import 'node_modules/@angular/material/theming'
+
+.footer
+  // oben, links, untern, rechts
+  padding: 3em 0.5em 2em 0.5em
+  display: flex
+  flex-direction: column
+  background: #e6ebf1
+  //background: custom-theme.mat-color(custom-theme.$website-primary)
+  // TODO: white als map
+  color: #888888
+
+
+.Links
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+  div
+    padding: 0 0.5em 0 0.5em
+
+.Copyright
+  padding-top: 1em
+  display: flex
+  align-self: center
+
+.Infos
+  padding: 3em 0.5em 1em 0.5em
