@@ -1,9 +1,28 @@
+@use 'src/custom-theme'
+// Import theming functions
+@import 'node_modules/@angular/material/theming'
+
 .toolbar
   display: flex
   flex-direction: row
   justify-content: space-between
+  padding-right: 0
+  background: mat-color(custom-theme.$website-primary, 800)
+  .mat-tab-label, .mat-tab-link
+    color: custom-theme.mat-color(custom-theme.$website-primary, 200)
+    opacity: unset
 
 ::ng-deep .mat-tab-nav-bar,
 ::ng-deep .mat-tab-header
   border-bottom: 0em
+
+::ng-deep.mat-menu-content
+  background: mat-color(custom-theme.$website-primary, 800)
+
+.mat-menu-item
+  color: custom-theme.mat-color(custom-theme.$website-primary, 200)
+
+::ng-deep.mat-menu-panel
+  background: mat-color(custom-theme.$website-primary, 800)
+  border-radius: unset
 

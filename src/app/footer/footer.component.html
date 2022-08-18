@@ -1,4 +1,4 @@
-<section class="Icons">
+<!--<section class="Icons">
 
   <section>
   <fa-icon [icon]="facebook"></fa-icon>
@@ -10,20 +10,32 @@
   <fa-icon [icon]="appstore"></fa-icon>
   </section>
 
-</section>
+</section>-->
 
 <section class="footer">
+
+  <section class="Icon">
+    <span class="hover"><fa-icon [icon]="playstore" matTooltip="Play Store" ></fa-icon></span>
+    <span class="hover"><fa-icon [icon]="appstore" matTooltip="App Store"></fa-icon></span>
+  </section>
+
+  <section class="Icon">
+    <span class="hover"><fa-icon [icon]="facebook" matTooltip="Facebook"></fa-icon></span>
+    <span class="hover"><fa-icon [icon]="youtube" matTooltip="You Tube"></fa-icon></span>
+    <span class="hover"><fa-icon [icon]="instagram" matTooltip="Insatagram"></fa-icon></span>
+  </section>
+
  <section class="Links">
     <section>
-      <div>Datenschutz</div>
+      <a routerLink = "datenschutz" >Datenschutz</a>
     </section>
 
     <section>
-      <div>Impressum</div>
+      <a routerLink = "impressum">Impressum</a>
     </section>
  </section>
-
+<mat-divider></mat-divider>
   <section class="Copyright">
-    <div>Copyright</div>
+    <div>Copyright &#169;</div>
   </section>
 </section>

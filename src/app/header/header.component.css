@@ -1,12 +1,17 @@
-.toolbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use 'src/custom-theme'
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   header.component.sass 1:1  root stylesheet */
 
-::ng-deep .mat-tab-nav-bar,
-::ng-deep .mat-tab-header {
-  border-bottom: 0em;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use 'src/custom-theme'\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   header.component.sass 1:1  root stylesheet";
 }
-
-/*# sourceMappingURL=header.component.css.map */

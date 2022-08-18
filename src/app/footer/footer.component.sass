@@ -2,35 +2,47 @@
 // Import theming functions
 @import 'node_modules/@angular/material/theming'
 
-.footer
+.footer, a
   // oben, links, untern, rechts
-  padding: 3em 0.5em 2em 0.5em
+  padding: 3em 0.5em 1em 0.5em
   display: flex
-  flex-direction: column
-  //background: #e6ebf1
-  //background: custom-theme.mat-color(custom-theme.$website-primary)
-  // TODO: white als map
-  //color: #888888
-
+  flex-direction: column // von oben nach unten
+  //background: custom-theme.$bg-color
+  background: mat-color(custom-theme.$website-primary, 800)
+  color: custom-theme.mat-color(custom-theme.$website-primary, 200)
+  text-decoration-line: none
+  a:hover
+    color: custom-theme.mat-color(custom-theme.$website-accent)
 
 .Links
   display: flex
   flex-direction: row
   justify-content: space-evenly
-  div
-    padding: 0 0.5em 0 0.5em
+  padding: 2.5em 0.5em 2em 0.5em // Abstand zu Icons drüber
+  flex-wrap: wrap
+  a
+    padding: 1em 5em 0 5em // min Abstand zu den Seiten/ der anderen Schrift
 
 .Copyright
-  padding-top: 1em
+  padding-top: 1em // Abstand zu Links
   display: flex
   align-self: center
+  div
+    color: custom-theme.mat-color(custom-theme.$website-accent)
 
-.Infos
-  padding: 3em 0.5em 1em 0.5em
 
 .Icon
   display: flex
-  flex-direction: column
+  flex-direction: row
+  align-self: center
+  padding: 1em 0 1em 0 // Abstand zu Icons
+
 
 fa-icon
-  padding: 0 0.5em 0 0.5em
+  padding: 0 1em 0 1em
+  font-size: 1.5rem // Größe des Icons
+
+
+.hover:hover
+  color: custom-theme.mat-color(custom-theme.$website-accent)
+

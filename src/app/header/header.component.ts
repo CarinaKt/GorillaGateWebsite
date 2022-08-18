@@ -22,15 +22,12 @@ export class HeaderComponent {
   constructor(private breakpointObserver: BreakpointObserver, private router:Router) {}
 
   index:number=0;
-  devices=[{path:'/aboutus'},{path:'/supportus'},{path:'/three'}]
+  navItems=[ {path:'/home', name:'Home'},{path:'/aboutus', name:'About us'},{path:'/supportus', name:'Support us'}]
 
   @ViewChild('sidenav')
   sidenav!: MatSidenav;
 
-  reason = '';
-
-  close(reason: string) {
-    this.reason = reason;
+  close() {
     this.sidenav.close();
   }
 

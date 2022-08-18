@@ -20,6 +20,8 @@ import { SupportusComponent } from './pages/supportus/supportus.component';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { ImpressumComponent } from './pages/impressum/impressum.component';
 import { DatenschutzComponent } from './pages/datenschutz/datenschutz.component';
+import {MatTooltip, MatTooltipModule} from "@angular/material/tooltip";
+import {MatDividerModule} from "@angular/material/divider";
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { DatenschutzComponent } from './pages/datenschutz/datenschutz.component'
     MatButtonModule,
     MatListModule,
     MatMenuModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatTooltipModule,
+    MatDividerModule
   ],
   exports:[
     AppComponent
