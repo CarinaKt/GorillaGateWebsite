@@ -15,24 +15,29 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatMenuModule } from "@angular/material/menu";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MainpageComponent } from './pages/mainpage/mainpage.component';
+import { SpaceappsComponent } from './pages/spaceapps/spaceapps.component';
 import { SupportusComponent } from './pages/supportus/supportus.component';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { ImpressumComponent } from './pages/impressum/impressum.component';
 import { DatenschutzComponent } from './pages/datenschutz/datenschutz.component';
 import {MatTooltip, MatTooltipModule} from "@angular/material/tooltip";
 import {MatDividerModule} from "@angular/material/divider";
+import { ContactComponent } from './pages/contact/contact.component';
+import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainpageComponent,
+    SpaceappsComponent,
     SupportusComponent,
     AboutusComponent,
     ImpressumComponent,
     DatenschutzComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,10 @@ import {MatDividerModule} from "@angular/material/divider";
     MatMenuModule,
     FontAwesomeModule,
     MatTooltipModule,
-    MatDividerModule
+    MatDividerModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule
   ],
   exports:[
     AppComponent
