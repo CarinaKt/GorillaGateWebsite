@@ -1,4 +1,5 @@
-<mat-toolbar class="toolbar" position="sticky">
+<mat-toolbar class="toolbar">
+
   <ng-container *ngIf="!(isHandset$ | async)">
     <section class="logo"><a routerLink="">
       <mat-icon color="accent">home</mat-icon>
@@ -7,7 +8,15 @@
     <section class="menueButtons">
 
       <nav mat-tab-nav-bar color="accent">
-        <a mat-tab-link #rla="routerLinkActive" *ngFor="let navItem of navItems" [routerLink]="navItem.path" routerLinkActive="active" [active]="rla.isActive">{{navItem.name}}
+        <!--um ein untermenue zu oeffnen-->
+        <!-- <button mat-button [matMenuTriggerFor]="beforeMenu">
+           <a mat-tab-link #rla="routerLinkActive"  routerLink="/home" routerLinkActive="active" [active]="rla.isActive">
+             Ape Store
+           </a>
+         </button>-->
+        <a mat-tab-link #rla="routerLinkActive" *ngFor="let navItem of navItems" [routerLink]="navItem.path"
+           routerLinkActive="active" [active]="rla.isActive">
+          {{navItem.name}}
         </a>
       </nav>
 
@@ -23,26 +32,26 @@
     </section>
   </ng-container>
 
-  <ng-container *ngIf="(isHandset$ | async)">
-    <section class="logo"><a routerLink="">
-      <mat-icon color="accent">home</mat-icon>
-    </a></section>
-    <section class="menueButtons">
-      <!--<button mat-icon-button>
-        <mat-icon (click)="sidenav.toggle();">menue</mat-icon>
-      </button>-->
+    <ng-container *ngIf="(isHandset$ | async)">
+      <section class="logo"><a routerLink="">
+        <mat-icon color="accent">home</mat-icon>
+      </a></section>
+      <section class="menueButtons">
+        <!--<button mat-icon-button>
+          <mat-icon (click)="sidenav.toggle();">menue</mat-icon>
+        </button>-->
 
-      <button mat-button [matMenuTriggerFor]="beforeMenu">
-        <mat-icon color="accent">menue</mat-icon>
-      </button>
-      <mat-menu #beforeMenu="matMenu" xPosition="before" class="mat-elevation-z0">
-        <ng-container *ngFor="let navItem of navItems;let i=index; let last = last">
-          <button mat-menu-item [routerLink]="navItem.path">{{navItem.name}}</button>
-        </ng-container>
-      </mat-menu>
+        <button mat-button [matMenuTriggerFor]="beforeMenu">
+          <mat-icon color="accent">menue</mat-icon>
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before" class="mat-elevation-z0">
+          <ng-container *ngFor="let navItem of navItems;let i=index; let last = last">
+            <button mat-menu-item [routerLink]="navItem.path">{{navItem.name}}</button>
+          </ng-container>
+        </mat-menu>
 
-    </section>
-  </ng-container>
+      </section>
+    </ng-container>
 
 </mat-toolbar>
 
