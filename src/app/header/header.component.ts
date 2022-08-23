@@ -22,7 +22,7 @@ export class HeaderComponent {
   constructor(private breakpointObserver: BreakpointObserver, private router:Router) {}
 
   index:number=0;
-  navItems=[ {path:'/spaceapps', name:'Space Apps'},{path:'/aboutus', name:'About us'},{path: '/contact', name:'Contact'},{path:'/supportus', name:'Support us'}]
+  navItems=[ {path:'/spaceapps', name:'Space Apes'},{path:'/aboutus', name:'About us'},{path: '/contact', name:'Contact'},{path:'/supportus', name:'Support us'}]
 
   @ViewChild('sidenav')
   sidenav!: MatSidenav;

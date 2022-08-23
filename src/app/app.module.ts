@@ -26,6 +26,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
+import {MatCardModule} from "@angular/material/card";
+import {HttpClientModule} from "@angular/common/http";
+import {MailService} from "./Services/MailService";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -57,12 +61,15 @@ import {MatInputModule} from "@angular/material/input";
     MatDividerModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    HttpClientModule,
+    FormsModule
   ],
   exports:[
     AppComponent
   ],
-  providers: [],
+  providers: [MailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

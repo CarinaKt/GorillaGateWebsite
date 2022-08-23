@@ -1,28 +1,58 @@
-<section class="form">
-
+<section class="form" >
+  <h1>Contact</h1>
   <mat-form-field appearance="fill">
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="bugReport">Bug Report</mat-option>
-      <mat-option value="feedback">Feedback</mat-option>
-      <mat-option value="bewerbug">Bewerbung</mat-option>
-      <mat-option value="partnerschaft">Partnerschaft</mat-option>
-      <mat-option value="sponsoring">Sponsoring</mat-option>
+    <mat-label>select category</mat-label>
+    <mat-select (selectionChange)="change($event.value)">
+      <ng-container *ngFor="let category of categories">
+        <mat-option value="{{category.id}}">{{category.name}}</mat-option>
+      </ng-container>
     </mat-select>
   </mat-form-field>
 
+  <ng-container *ngIf="selectedCategory.gameForm">
+    <mat-form-field appearance="fill" >
+      <mat-label>select Game</mat-label>
+      <mat-select [(value)]="mail.gameForm">
+        <ng-container *ngFor="let game of games">
+          <mat-option value="{{game.id}}">{{game.name}}</mat-option>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+  </ng-container>
+
+  <ng-container *ngIf="selectedCategory.nameForm == true">
+    <mat-form-field appearance="fill">
+      <mat-label>name</mat-label>
+      <input matInput [(ngModel)]="name">
+    </mat-form-field>
+  </ng-container>
+
+  <ng-container *ngIf="selectedCategory.emailForm == true">
+    <mat-form-field appearance="fill">
+      <mat-label>email</mat-label>
+      <input matInput [(ngModel)]="email">
+    </mat-form-field>
+  </ng-container>
+
+  <ng-container *ngIf="selectedCategory.twitchNameForm == true">
+    <mat-form-field appearance="fill">
+      <mat-label>twitch name</mat-label>
+      <input matInput [(ngModel)]="twitchName">
+    </mat-form-field>
+  </ng-container>
+
+<ng-container *ngIf="selectedCategory.messageForm == true">
   <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
+    <mat-label>message</mat-label>
+    <textarea matInput [(ngModel)]="message" ></textarea>
   </mat-form-field>
+</ng-container>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
-
-  <button mat-button>Finish</button>
-
+  <ng-container *ngIf="selectedCategory.id != 'application'">
+    <ng-container *ngIf="selectedCategory.id != ''">
+  <button mat-button (click)="submit()">Send</button>
+    </ng-container>
+  </ng-container>
 </section>
 
 <!--

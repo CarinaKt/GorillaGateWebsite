@@ -6,4 +6,10 @@
   padding-top: -15em;
 }
 
+.frontContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*# sourceMappingURL=spaceapps.component.css.map */

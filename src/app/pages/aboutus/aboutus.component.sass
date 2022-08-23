@@ -1,0 +1,26 @@
+@use 'src/custom-theme'
+// Import theming functions
+@import 'node_modules/@angular/material/theming'
+
+.aboutus
+  padding: 2em
+
+.example-header-image
+  background-size: cover
+
+.example-card
+  display: flex
+  flex-direction: column
+  background: custom-theme.mat-color(custom-theme.$website-primary,100)
+  margin-bottom: 2em
+
+  .mat-card-header
+    height: 7em
+
+  .mat-card-avatar
+    height: 5em
+    width: auto
+
+  ::ng-deep.mat-card-header-text
+    align-self: center
+

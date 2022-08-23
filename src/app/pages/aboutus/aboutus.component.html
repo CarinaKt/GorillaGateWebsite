@@ -1,1 +1,15 @@
-<p>aboutus works!</p>
+<section class="aboutus">
+<h1>About us</h1>
+<section *ngFor="let person of persons">
+<mat-card class="example-card">
+<mat-card-header fxLayout fxLayoutAlign="start center">
+  <img mat-card-avatar class="example-header-image" src="{{person.img}}">
+  <mat-card-title>{{person.name}}</mat-card-title>
+  <mat-card-subtitle>{{person.name}}</mat-card-subtitle>
+</mat-card-header>
+  <mat-card-content>
+  <p>{{person.description}}</p>
+</mat-card-content>
+</mat-card>
+</section>
+</section>
