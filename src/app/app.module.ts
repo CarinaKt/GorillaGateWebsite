@@ -29,7 +29,10 @@ import {MatInputModule} from "@angular/material/input";
 import {MatCardModule} from "@angular/material/card";
 import {HttpClientModule} from "@angular/common/http";
 import {MailService} from "./Services/MailService";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { DialogOKComponent } from './pages/contact/dialog/dialog/ok/dialog-o-k.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import { DialogFailComponent } from './pages/contact/dialog/dialog/fail/dialog-fail.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,8 @@ import {FormsModule} from "@angular/forms";
     ImpressumComponent,
     DatenschutzComponent,
     ContactComponent,
+    DialogOKComponent,
+    DialogFailComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,12 +69,14 @@ import {FormsModule} from "@angular/forms";
     MatInputModule,
     MatCardModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   exports:[
     AppComponent
   ],
-  providers: [MailService],
+  providers: [MailService, DialogOKComponent, DialogFailComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,216 @@
 
 @import '~@angular/material/theming';
 
+
+
+/* For use in src/lib/core/theming/_palette.scss */
+
+$primary-palette: (
+  50 : #e5e7ea,
+  100 : #bdc3cb,
+  200 : #929ba8,
+  300 : #667285,
+  400 : #45546b,
+  500 : #243651,
+  600 : #20304a,
+  700 : #1b2940,
+  800 : #162237,
+  900 : #0d1627,
+  A100 : #6694ff,
+  A200 : #3370ff,
+  A400 : #004cff,
+  A700 : #0045e6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$secondary-palette: (
+  50 : #e5eaea,
+  100 : #bdc9cb,
+  200 : #92a6a8,
+  300 : #668285,
+  400 : #45676b,
+  500 : #244c51,
+  600 : #20454a,
+  700 : #1b3c40,
+  800 : #163337,
+  900 : #0d2427,
+  A100 : #66e8ff,
+  A200 : #33e0ff,
+  A400 : #00d9ff,
+  A700 : #00c3e6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-lila: (
+  50 : #e8e5ea,
+  100 : #c5bdcb,
+  200 : #9f92a8,
+  300 : #796685,
+  400 : #5c456b,
+  500 : #3f2451,
+  600 : #39204a,
+  700 : #311b40,
+  800 : #291637,
+  900 : #1b0d27,
+  A100 : #b266ff,
+  A200 : #9933ff,
+  A400 : #7f00ff,
+  A700 : #7300e6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+
+
+
+
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/roboto-v30-latin/roboto-v30-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('fonts/roboto-v30-latin/roboto-v30-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-300.woff') format('woff'), /* Modern Browsers */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-300.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/roboto-v30-latin/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('fonts/roboto-v30-latin/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/roboto-v30-latin/roboto-v30-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('fonts/roboto-v30-latin/roboto-v30-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-500.woff') format('woff'), /* Modern Browsers */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('fonts/roboto-v30-latin//roboto-v30-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/roboto-v30-latin/roboto-v30-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('fonts/roboto-v30-latin/roboto-v30-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-700.woff') format('woff'), /* Modern Browsers */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('fonts/roboto-v30-latin/roboto-v30-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'DoFuturistic';
+  src: url('fonts/webfontkit-20220824-085110/dofuturistic-jrwab-webfont.woff2') format('woff2'),
+  url('fonts/webfontkit-20220824-085110/dofuturistic-jrwab-webfont.woff') format('woff'),
+  url('fonts/webfontkit-20220824-085110/dofuturistic-jrwab-webfont.ttf') format('truetype'),
+  url('fonts/webfontkit-20220824-085110/dofuturistic-jrwab-webfont.svg#do_futuristicregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'NextSphere';
+  src:  url('fonts/nextShereBlack/nextsphereblack-ezljg-webfont.woff2') format('woff2'),
+  url('fonts/nextShereBlack/nextsphereblack-ezljg-webfont.woff') format('woff'),
+  url('fonts/nextShereBlack/nextsphereblack-ezljg-webfont.ttf') format('truetype'),
+  url('fonts/nextShereBlack/nextsphereblack-ezljg-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'SpherexThin';
+  src:  url('fonts/spherexThin/spherenextthin-wyr54-webfont.woff2') format('woff2'),
+  url('fonts/spherexThin/spherenextthin-wyr54-webfont.woff') format('woff'),
+  url('fonts/spherexThin/spherenextthin-wyr54-webfont.ttf') format('truetype'),
+  url('fonts/spherexThin/spherenextthin-wyr54-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'game_of_squidsregular';
+  src: url('fonts/gameOfSquids/gameofsquids-1gmvl-webfont.woff2') format('woff2'),
+  url('fonts/gameOfSquids/gameofsquids-1gmvl-webfont.woff') format('woff'),
+  url('fonts/gameOfSquids/gameofsquids-1gmvl-webfont.ttf') format('truetype'),
+  url('fonts/gameOfSquids/gameofsquids-1gmvl-webfont.svg#game_of_squidsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -13,17 +223,14 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-;
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$website-primary: mat.define-palette(mat.$grey-palette);
+$website-primary: mat.define-palette($primary-palette);
 $website-accent: mat.define-palette(mat.$teal-palette, A200, A100, A400);
 
-
 // The warn palette is optional (defaults to red).
-$website-warn:  mat.define-palette(mat.$red-palette);
+$website-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -40,7 +247,30 @@ $website-theme: mat.define-light-theme((
 // that you are using.
 //@include mat.all-component-themes($website-theme);
 //@include mat.all-component-colors($website-theme);
-@include mat.all-component-themes($website-theme);
+ @include mat.all-component-themes($website-theme);
+ // @include font-face('DoFuturistic', "DoFuturistic-JRwaB", "/assets/font/", '');
+
+.fancy {
+  font-family: game_of_squidsregular;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+  padding-bottom: 2em;
+  background: mat-color($website-accent, A100);
+  color: mat-color($website-primary, 900);
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: SpherexThin;
+}
+
+p,h1,h2,div {
+  color: #333333;
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//h1{ font-family: DoFuturistic, sans-serif;}
+

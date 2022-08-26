@@ -1,3 +1,7 @@
+@use 'src/custom-theme'
+// Import theming functions
+@import 'node_modules/@angular/material/theming'
+
 .frontImg
   display: flex
   justify-content: center
@@ -6,8 +10,76 @@
   padding-top: -15em
 
 .frontContainer
-  // background-image: url("~src/assets/Zeichenfläche 1.jpg")
+  background-image: url("~src/assets/img_2.png")
   display: flex
   flex-direction: column
+  align-items: flex-end
+  height: 30em
+
+  .fancy
+    font-size: 5rem
+    display: flex
+    padding-top: 1em
+    padding-right: 1em
+    color: white
+    line-height: 1em
+    //padding-left: 3em
+
+
+.frontContainerMobile
+  background-image: url("~src/assets/img_2.png")
+  display: flex
+  flex-direction: column
+  height: 30em
+  padding-top: 1em
+
+  .fancy
+    font-size: 5rem
+    text-align: center
+    display: flex
+    flex-direction: column
+    color: white
+    line-height: 1em
+
+
+.downloadButton
+  font-size: 2rem
+  background: #333333
+  padding: 1em
+
+
+.buttonContainer
+  padding-top: 6em
+  padding-left: 35em
+
+
+.app-icons
+  display: flex
+  flex-direction: row
   align-items: center
-  //height: 100vh
+  justify-content: center
+  flex-wrap: wrap
+
+.android
+  height: 5.7em
+  transition: all .2s ease-in-out
+  padding: 0 1em 0 1em
+
+.apple
+  height: 4em
+  transition: all .2s ease-in-out
+  padding: 0 1em 0 1em
+
+.center
+  display: flex
+  justify-content: center
+
+.promotionContainer
+  display: flex
+  flex-direction: row
+  padding: 2em 5em 2em 5em
+  justify-content: space-evenly
+  flex-wrap: wrap
+
+.apple:hover, .android:hover
+  transform: scale(1.1)

@@ -1,2 +1,21 @@
+@use 'src/custom-theme'
+// Import theming functions
+@import 'node_modules/@angular/material/theming'
+
 .support
   padding: 2em
+  display: flex
+  flex-direction: column
+  align-items: center
+  h2
+    text-align: center
+
+.grow
+  transition: all .2s ease-in-out
+
+.grow:hover
+  transform: scale(1.1)
+
+.supportButton
+  padding-top: 2em
+  padding-bottom: 1em

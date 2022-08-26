@@ -13,9 +13,10 @@ export interface Mail {
 
 @Injectable()
 export class MailService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
-  sendMail(mail: Mail): Observable<Mail[]> {
-    return this.http.post<Mail[]>('http://localhost:3000/sendmail', mail);
+  sendMail(mail: Mail): Observable<{response:string}> {
+    return this.http.post<{response:string}>('http://localhost:3000/sendmail', mail)
   }
 }
